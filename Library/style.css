@@ -2,6 +2,7 @@ html, body {
     margin: 0;
     height: 100%;
     background-color: #00664B;
+    padding: 0;
 }
 
 /*Header section*/
@@ -21,6 +22,9 @@ html, body {
     font-size: 27px;
     margin-left: auto;
     padding-right: 10px;
+    border: #D38855;
+    background-color: #D38855;
+    cursor: pointer;
 }
 
 #book {
@@ -37,7 +41,7 @@ html, body {
 
 }
 
-.book-container1, .book-container2, .book-container3 {
+.book-container, .book-container2 {
     background-color: #8d3b3b;
     color: #D38855;
     margin: 15px;
@@ -70,3 +74,113 @@ html, body {
     background-color: rgb(175, 16, 16);
     color: #e4d0c2;
 }
+
+/*Adding a new book section*/
+
+.add-new-book {
+    background-color: rgba(234, 167, 122, 0.7);
+    margin: 0px;
+    padding: 50px;
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    width: 100vw; 
+    height: 100vh;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-form-group {
+    background-color: #eaa77a;
+    position: relative;
+    display: block;
+    padding: 60px;
+    align-items: center;
+    justify-content: center;
+    max-width: 90vw;
+    min-width: 400px;
+    width: 600px;
+    box-sizing: border-box;
+    margin-left: 350px;
+    margin-right: 300px;
+}
+
+.main-form-group .read-form-group{
+    display: none;
+}
+
+.form-group, .read-form-group {
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.title2, .author2, .pages2, .read {
+    font-size: 20px;
+    color: #8d3b3b;
+    font-weight: bold;
+}
+
+#title2, #author2, #pages2, #read {
+    font-size: 20px;
+    color: #8d3b3b;
+    background-color: #ddb9a1;
+    margin: 6px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+#Read {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: #00664B;
+    color: #e4d0c2;
+}
+
+#Unread {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: rgb(175, 16, 16);
+    color: #e4d0c2;
+    margin-left: 10px;
+}
+
+.form-group-buttons {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.form-group-add-button {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+#Add {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: #8d3b3b;
+    color: #e4d0c2;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.exit {
+    position: absolute;
+    background-color: #eaa77a;
+    border: none;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    font-size: 18px;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+

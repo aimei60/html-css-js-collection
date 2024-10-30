@@ -10,11 +10,11 @@
     <div class="library-header">
         <div class="library-name">Chapters & Charms</div>
         <span id="book" class="mdi mdi-book-open-page-variant"></span>
-        <span id="add" class="mdi mdi-plus-circle-outline"></span>
+        <button id="add" class="mdi mdi-plus-circle-outline"></button>
     </div>
 
     <div class="book-section">
-        <div class="book-container1">
+        <div class="book-container">
             <div class="title">Title: To Kill a Mockingbird</div>
             <div class="author">Author: Harper Lee</div>
             <div class="pages">Pages: 320</div>
@@ -23,7 +23,7 @@
             <button class="remove-button">Remove</button>
         </div>
 
-        <div class="book-container2">
+        <div class="book-container">
             <div class="title">Title: Wuthering Heights</div>
             <div class="author">Author: Emily Bronte</div>
             <div class="pages">Pages: 475</div>
@@ -32,7 +32,7 @@
             <button class="remove-button">Remove</button>
         </div>
 
-        <div class="book-container3">
+        <div class="book-container">
             <div class="title">Title: Othello</div>
             <div class="author">Author: William Shakespeare</div>
             <div class="pages">Pages: 385</div>
@@ -40,11 +40,38 @@
             <button class="button-status">Update Read Status</button>
             <button class="remove-button">Remove</button>
         </div>
-    </div>
 
-    
-    
-    
+        <form action="#" method="post" class="add-new-book">
+            <div class="main-form-group">
+                <button class="exit" type="button">✖</button>
+                <div class="form-group">
+                    <label for="title2" class="title2">Book Title:</label>
+                    <input type="text" id="title2" name="title2">
+                </div>
+                <div class="form-group">
+                    <label for="author2" class="author2">Author:</label>
+                    <input type="text" id="author2" name="author2">
+                </div>
+                <div class="form-group">
+                    <label for="pages2" class="pages2">Pages:</label>
+                    <input type="number" id="pages2" name="pages2">
+                </div>
+                <div class="read-form-group" id="read-form-group">
+                    <label for="read" class="read">Read Status:</label>
+                    <input type="text" id="read" name="read">
+                </div>
+                <div class="form-group-buttons">
+                    <button class="readbutton" type="button" id="Read">Read</button>
+                    <button class="unreadbutton" type="button" id="Unread">Unread</button>
+                </div>
+                <div class="form-group-add-button">
+                    <button type="button" id="Add">Add</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
 </body>
 </html>
