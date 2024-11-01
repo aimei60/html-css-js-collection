@@ -66,7 +66,6 @@ function Book(title, author, pages, readStatus) {
 }
 
 const add = document.getElementById('Add');
-add.addEventListener('click', addBookToLibrary);
 
 function addBookToLibrary() {
     const titleValue = document.getElementById('title2').value;
@@ -80,7 +79,72 @@ function addBookToLibrary() {
 
     console.log(myLibrary)
 }
+ /*it pushes to the array now need to connect js to html and css so user can push to array/web browser */
 
+function connectLibrary() {
+    const bookContainer = document.createElement("div");
+    bookContainer.className = "book-container";
 
+    //Title
+    const titleDiv = document.createElement("div");
+    titleDiv.className = "title";
+    const titleValue = document.getElementById('title2').value;
+    titleDiv.textContent = `Title: ${titleValue}`
 
+    //Author
+    const authorDiv = document.createElement("div");
+    authorDiv.className = "author";
+    const authorValue = document.getElementById('author2').value;
+    authorDiv.textContent = `Author: ${authorValue}`
 
+    //Pages
+    const pagesDiv = document.createElement("div");
+    pagesDiv.className = "pages";
+    const pagesValue = document.getElementById('pages2').value;
+    pagesDiv.textContent = `Pages: ${pagesValue}`
+
+    // Read Status
+    const statusDiv = document.createElement("div");
+    statusDiv.className = "status";
+    const readLabelValue = document.getElementById('read').value;
+    statusDiv.textContent = `Read Status: ${readLabelValue}`
+    
+    //Read status button
+    const readStatusButton = document.createElement("button");
+    readStatusButton.className = "button-status";
+    readStatusButton.textContent = "Update Read Status"
+
+    //Remove button
+    const removeButton = document.createElement("button");
+    removeButton.className = "remove-button";
+    removeButton.textContent = "Remove"
+
+    //Update Read Status button add event listener
+    readStatusButton.addEventListener('click', () => {
+        if (statusDiv.textContent === 'Read Status: Read') {
+            statusDiv.textContent = 'Read Status: Unread';
+        } else {
+            statusDiv.textContent = 'Read Status: Read';
+        }
+    });
+
+    // Remove button add event listener
+    removeButton.addEventListener('click', () => {
+        bookContainer.remove();
+    });
+
+     /* append all of the above */
+     bookContainer.append(titleDiv);
+     bookContainer.append(authorDiv);
+     bookContainer.append(pagesDiv);
+     bookContainer.append(statusDiv);
+     bookContainer.append(readStatusButton);
+     bookContainer.append(removeButton);
+ 
+     const bookSection = document.querySelector('.book-section');
+     bookSection.append(bookContainer);
+
+}
+
+add.addEventListener('click', addBookToLibrary);
+add.addEventListener('click', connectLibrary)
