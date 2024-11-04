@@ -1,3 +1,4 @@
+/*remove button to remove the button from the webpage */
 const removeButtons = document.querySelectorAll('.remove-button');
 
 removeButtons.forEach(button => {
@@ -7,6 +8,7 @@ removeButtons.forEach(button => {
     });
 });
 
+/* Update butoon: updates the reading status when the button is clicked to read or unread */
 const updateReadStatus = document.querySelectorAll('.button-status');
 
 updateReadStatus.forEach(button => {
@@ -22,7 +24,7 @@ updateReadStatus.forEach(button => {
     })
 });
 
-/*Clicking the add button to allow user to add a book */
+/*Click the add button to allow user to add a book */
 const addButton = document.getElementById('add');
 const newBook = document.querySelector('.add-new-book');
 const exit = document.querySelector('.exit');
@@ -31,12 +33,12 @@ addButton.addEventListener('click', function () {
     newBook.style.display = 'block';
 });
 
-/*When clicking on the exit button the add book section disappears */
+/* Exit the add card section */
 exit.addEventListener('click', function () {
     newBook.style.display = 'none';
 });
 
-/* add in here when user clicks read or unread button to unhide and update the value on the page */
+/* when user clicks either the read or unread button the read status is visible and updates the value on the page */
 const readButton = document.getElementById('Read');
 const unReadButton = document.getElementById('Unread');
 const readSection = document.getElementById('read-form-group');
@@ -52,10 +54,7 @@ unReadButton.addEventListener('click', function () {
     readValue.value = 'Unread';
 });
 
-/*
-user fills the details in
-clicks add 
-and it becomes a new card on the browser */
+/* This section sets up the function and array for adding new cards */
 const myLibrary = [];
 
 function Book(title, author, pages, readStatus) {
@@ -79,31 +78,31 @@ function addBookToLibrary() {
 
     console.log(myLibrary)
 }
- /*it pushes to the array now need to connect js to html and css so user can push to array/web browser */
+ /* This section shows adding the card to the webpage */
 
 function connectLibrary() {
     const bookContainer = document.createElement("div");
     bookContainer.className = "book-container";
 
-    //Title
+    //Title section retrieving the value and adding to the page
     const titleDiv = document.createElement("div");
     titleDiv.className = "title";
     const titleValue = document.getElementById('title2').value;
     titleDiv.textContent = `Title: ${titleValue}`
 
-    //Author
+    //Author retrieving the value and adding to the page
     const authorDiv = document.createElement("div");
     authorDiv.className = "author";
     const authorValue = document.getElementById('author2').value;
     authorDiv.textContent = `Author: ${authorValue}`
 
-    //Pages
+    //Pages retrieving the value and adding to the page
     const pagesDiv = document.createElement("div");
     pagesDiv.className = "pages";
     const pagesValue = document.getElementById('pages2').value;
     pagesDiv.textContent = `Pages: ${pagesValue}`
 
-    // Read Status
+    // Read Status retrieving the value and adding to the page
     const statusDiv = document.createElement("div");
     statusDiv.className = "status";
     const readLabelValue = document.getElementById('read').value;
@@ -133,7 +132,7 @@ function connectLibrary() {
         bookContainer.remove();
     });
 
-     /* append all of the above */
+     /* append all of the above so its visbile on the page */
      bookContainer.append(titleDiv);
      bookContainer.append(authorDiv);
      bookContainer.append(pagesDiv);
