@@ -21,3 +21,6 @@ I created a Library book tracker which stores the books a user reads and stores 
 
 # Screenshot
 Here is a preview of the Library 
+
+![Screenshot of my dashboard](mainpage.png)
+![Screenshot of my dashboard](userAddSection.png)
