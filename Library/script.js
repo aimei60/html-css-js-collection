@@ -8,7 +8,7 @@ removeButtons.forEach(button => {
     });
 });
 
-/* Update butoon: updates the reading status when the button is clicked to read or unread */
+/* Update button: updates the reading status when the button is clicked to read or unread */
 const updateReadStatus = document.querySelectorAll('.button-status');
 
 updateReadStatus.forEach(button => {
@@ -145,5 +145,23 @@ function connectLibrary() {
 
 }
 
+/* Clear the form fields once the add button is clicked upon */
+
+function clearFormFields() {
+    const titleValueToClear = document.getElementById('title2');
+    const authorValueToClear = document.getElementById('author2');
+    const pagesValueToClear = document.getElementById('pages2');
+    const readLabelValueToClear = document.getElementById('read');
+
+    titleValueToClear.value = "";
+    authorValueToClear.value = "";
+    pagesValueToClear.value = "";
+    readLabelValueToClear.value = "";
+    
+
+}
+
 add.addEventListener('click', addBookToLibrary);
 add.addEventListener('click', connectLibrary)
+add.addEventListener('click', clearFormFields)
+
